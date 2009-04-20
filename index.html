@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>O3's Temp Log</title>
-        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css"> 
-        <link rel="stylesheet" type="text/css" href="static/css/min.main.css">
-        <!--[if IE]><style type="text/css">* {display: none; !importanat}</style><![endif]-->
-    </head>
-    <body>
-        <h1>因為<abbr title="othree">我</abbr> <a href="http://blog.othree.net">blog</a> 的機器還沒復活，所以先用這裡寫些東西～～</h1>
-        <h2 id="post1">Use DOMContentLoaded ?</h2>
-        <time datetime="2009-04-20"><img src="static/img/calicon/4-20-1.png" alt="4/20" width="45"></time>
-        <p>onload 越來越少人在用，而改用像是 <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events#DOMContentLoaded">DOMContentLoaded</a> 這種事件來代替，像是 <a href="http://jquery.com/">jQuery</a> 也有個 <a href="http://docs.jquery.com/Events/ready">ready event</a> 可以用，主要是因為 onload 事件還要等待網頁中所有的元素都讀取完畢（或是 timeout），這些元素包括圖片，其他網站的 style, script，flash 物件等，常常訪客開始看網頁內容時，需要執行的 script 卻還沒開始執行，不過並<abbr title="Internet Explorer">不是所有瀏覽器</abbr>都有支援 DOMContentLoaded 或是提供其他替代方案，所以各家 js library 為了處理這問題就無所不用其極限。</p>
-        <p>我是傾向用另外一個方法處理這問題，不過需要一些對網頁內元件的控制能力，其實也很簡單，就是把 script 放在頁面尾端，然後馬上跑，這方法除了可以解決上述問題外，還有另外兩個好處，一是所有瀏覽器都支援，二是可以讓網頁內容先讀進來才跑 script，這也是 YSlow 的<a href="http://developer.yahoo.com/performance/rules.html#js_bottom">建議項目之一</a>，當然如果你就是想那讓那些瀏覽器的使用者看起來感覺不好，就當我沒說吧XD。</p>
-    </body>
-</html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>O3's Temp Log</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css"> 
+<link rel="stylesheet" type="text/css" href="static/css/min.main.css">
+<!--[if IE]><style type="text/css">* {display: none; !importanat}</style><![endif]-->
+
+<h1>因為<abbr title="othree">我</abbr> <a href="http://blog.othree.net">blog</a> 的機器還沒復活，所以先用這裡寫些東西～～</h1>
+<h2 id="post1">Use DOMContentLoaded ?</h2>
+<time datetime="2009-04-20"><img src="static/img/calicon/4-20-1.png" alt="4/20" width="45"></time>
+<p>onload 越來越少人在用，而改用像是 <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events#DOMContentLoaded">DOMContentLoaded</a> 這種事件來代替，像是 <a href="http://jquery.com/">jQuery</a> 也有個 <a href="http://docs.jquery.com/Events/ready">ready event</a> 可以用，主要是因為 onload 事件還要等待網頁中所有的元素都讀取完畢（或是 timeout），這些元素包括圖片，其他網站的 style, script，flash 物件等，常常訪客開始看網頁內容時，需要執行的 script 卻還沒開始執行，不過並<abbr title="Internet Explorer">不是所有瀏覽器</abbr>都有支援 DOMContentLoaded 或是提供其他替代方案，所以各家 js library 為了處理這問題就無所不用其極限。</p>
+<p>我是傾向用另外一個方法處理這問題，不過需要一些對網頁內元件的控制能力，其實也很簡單，就是把 script 放在頁面尾端，然後馬上跑，這方法除了可以解決上述問題外，還有另外兩個好處，一是所有瀏覽器都支援，二是可以讓網頁內容先讀進來才跑 script，這也是 YSlow 的<a href="http://developer.yahoo.com/performance/rules.html#js_bottom">建議項目之一</a>，當然如果你就是想那讓那些瀏覽器的使用者看起來感覺不好，就當我沒說吧XD。</p>
