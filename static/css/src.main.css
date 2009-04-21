@@ -2,6 +2,7 @@ html {
     background: url('../img/Keron_star.png') fixed center center no-repeat;
     height: 100%;
     font-family: HelveticaNeue, 'Helvetica Neue', 'Microsoft JhengHei', 'Microsoft YaHei', Arial, Helvetica, Meiryo, sans-serif;
+    padding: 0 0 100px;
 }
 
 h1 {
