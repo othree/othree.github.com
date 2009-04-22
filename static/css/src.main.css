@@ -2,16 +2,14 @@ html {
     background: url('../img/Keron_star.png') fixed center center no-repeat;
     height: 100%;
     font-family: HelveticaNeue, 'Helvetica Neue', 'Microsoft JhengHei', 'Microsoft YaHei', Arial, Helvetica, Meiryo, sans-serif;
-    padding: 0 0 100px;
 }
 
 h1 {
     font-size: 200%;
     font-weight: bold;
-    padding: 20px;
+    padding: 40px 20px;
     color: #eee;
     background: #000;
-    border-bottom: 4px solid #999;
 }
 h1 a:link, h1 a:visited {
     color: #eee;
@@ -59,7 +57,7 @@ a:hover {
 }
 
 #license {
-    margin-top: 30px;
+    margin: 50px 0 50px 20px;
     text-decoration: underline;
     color: #666;
 }
