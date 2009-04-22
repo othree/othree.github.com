@@ -57,3 +57,9 @@ a:link, a:visited {
 a:hover {
     color: #e11;
 }
+
+#license {
+    margin-top: 30px;
+    text-decoration: underline;
+    color: #666;
+}

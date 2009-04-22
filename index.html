@@ -27,6 +27,8 @@
 <p>onload 越來越少人在用，而改用像是 <a href="https://developer.mozilla.org/en/Gecko-Specific_DOM_Events#DOMContentLoaded">DOMContentLoaded</a> 這種事件來代替，像是 <a href="http://jquery.com/">jQuery</a> 也有個 <a href="http://docs.jquery.com/Events/ready">ready event</a> 可以用，主要是因為 onload 事件還要等待網頁中所有的元素都讀取完畢（或是 timeout），這些元素包括圖片，其他網站的 style, script，flash 物件等，常常訪客開始看網頁內容時，需要執行的 script 卻還沒開始執行，不過並<abbr title="Internet Explorer">不是所有瀏覽器</abbr>都有支援 DOMContentLoaded 或是提供其他替代方案，所以各家 js library 為了處理這問題就無所不用其極限。</p>
 <p>我是傾向用另外一個方法處理這問題，不過需要一些對網頁內元件的控制能力，其實也很簡單，就是把 script 放在頁面尾端，然後馬上跑，這方法除了可以解決上述問題外，還有另外兩個好處，一是所有瀏覽器都支援，二是可以讓網頁內容先讀進來才跑 script，這也是 YSlow 的<a href="http://developer.yahoo.com/performance/rules.html#js_bottom">建議項目之一</a>，當然如果你就是想那讓那些瀏覽器的使用者看起來感覺不好，就當我沒說吧XD。</p>
 
+<p id="license">文章都用 <a href="http://sam.zoy.org/wtfpl/" rel="license">WTFPL - Do What The Fuck You Want To Public License</a> 授權條款</p>
+
 <!-- Include the Google Friend Connect javascript library. -->
 <script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
 <!-- Define the div tag where the gadget will be inserted. -->
