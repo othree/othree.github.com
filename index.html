@@ -9,6 +9,17 @@
 
 <h1>因為<abbr title="othree">我</abbr> <a href="http://blog.othree.net">blog</a> 的機器還沒復活，所以先用這裡寫些東西～～</h1>
 
+<h2 id="post7">Hate IE</h2>
+<time datetime="2009-04-27"><img src="static/img/calicon/4-27-7.png" alt="4/27" width="45"></time>
+<p>昨天我才被微軟救到，今天它就用 IE 來討債了Q_Q，這件事要從 <a href="http://http://joysound.com/">JOYSOUND</a> 講起， JOYSOUND是日本的一個卡拉OK系統，前陣子推出了 Wii 版，讓使用者可以用便宜的月費就可以唱到數萬首日文歌曲，不過使用上有個問題，就是它的網頁沒有針對 Wii 版的搜尋功能，透過 Wii 介面來搜尋又不夠快，於是我就自己手寫了一個 <a href="http://joysound.othree.net/">http://joysound.othree.net/</a>，資料來源是他們網站，我定期去撈新增曲目，結果最近太混，才發現 7 週沒有去更新，網頁上又只保留 5 週份的更新資料，於是就趕快上 Google 看有沒有 cache，順利的找到4份中的3份，但是有一份找很久都找不到，過了幾十分，找了一堆日本的搜尋引擎，才在<a href="http://jp.msn.com/">日本 MSN</a> 找到那個網頁的 cache，於是心中一顆大石頭終於落地，也實在沒想到會讓微軟幫到這樣一個大忙。</p>
+<p>時光飛逝，歲月如梭，一下就來到了新的一週，早上九點半開始開了四小時的會，回到電腦前一看發現有 IE bug 要解，沒想到這一個 bug 讓我整整花了4個小時才解決掉，一開始看起來是 javascript 問題，搞到最後竟然是無法說明的 CSS 地雷，花了數小時，只砍掉下面這樣一行東西而已：</p>
+<pre class="brush:css">
+right: 0;
+</pre>
+<p>更讓人難過的是這個 bug 是在 IE7, 8才會發生的，講到這我就必須要抱怨一下 IE，這陣子處理不少問題根本都還是 IE7, 8 還在的，感覺上 IE 這兩次升級對於 javascript 相關的部分都沒什麼改善，這也是為什麼我決定把這裡弄的讓 IE 都看不到。</p>
+<p>最後就是提一下，大概要怎麼判斷是不是 CSS 地雷，和要怎麼找，基本上，會被稱為地雷，就是那種會看起來應該不會有問題，出了問題你也不知道問題在哪的狀況，如果是 javascript 的問題現在瀏覽器都可以妥善處理，不小心跑進無窮迴圈也不會跑到死，所以如果一直出現找不到的問題發生點的話，那就有可能是 CSS 地雷了，像我這次遇到的狀況是整個 IE 吃光 CPU，但是不會有訊息問我要不要停止執行 script，然後我找了很久，排除頁面上各種可能產生影響的 javascript，最後才懷疑到 CSS 上，這時候我已經浪費超過三小時了，要判斷是不是 CSS 問題到很簡單，先把 CSS disable 掉試試看就知道了，如果一 disable 掉問題就沒了，那很明顯就是 CSS 的問題，接下來就是用消去來尋找造成問題的 CSS 定義，就不贅述了。</p>
+<p>真的最後了，就是其實 JOYSOUND 現在已經可以在網頁上<a href="http://joysound.com/ex/wii/search/index.htm">搜尋 Wii 版曲目</a>了XDD。</p>
+
 <h2 id="post6">Handle IE</h2>
 <time datetime="2009-04-26"><img src="static/img/calicon/4-26-6.png" alt="4/26" width="45"></time>
 <p>這裡本來用下面的語法來阻擋IE使用者：</p>
@@ -84,6 +95,7 @@
 
 <script type="text/javascript" src="static/syntaxhighlighter/scripts/shCore.js"></script>
 <script type="text/javascript" src="static/syntaxhighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="static/syntaxhighlighter/scripts/shBrushCss.js"></script>
 <script type="text/javascript">
 SyntaxHighlighter.defaults['toolbar'] = false;
 SyntaxHighlighter.all();

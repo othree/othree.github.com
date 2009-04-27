@@ -10,6 +10,7 @@ h1 {
     padding: 40px 20px;
     color: #eee;
     background: #000;
+    text-shadow: 0 0 25px #fff;
 }
 h1 a:link, h1 a:visited {
     color: #eee;
